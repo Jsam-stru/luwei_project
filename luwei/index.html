@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+   <script src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+   <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<style type="text/css">
+	input{margin: 0;padding: 0;}
+
+	/*.btn_login{margin-top: 8px;}*/
+	.header-wrapper{height: 52px;background: red;line-height: 52px;}
+	.bgheader{background: #499EF3;}
+	#ul_nav a{color: #fff;font-size: 16px;}
+	#ul_nav a:hover{color: #000;}
+
+
+	.body-wrapper{background: #F7F7F7;padding: 40px 0 0 0;}
+	.photo{margin-right: 5px;text-align: center;}
+	.photo img{border-radius: 50%;}
+	.infoplace{display: inline-block;background:#499EF3;color: #fff; border-radius: 3px;width:120px;text-align: center;}
+	.bg-border{background: #fff;border-right:1px solid #ccc; border-bottom:1px solid #ccc;}
+	.ul_borderAndheight{}
+	.ul_borderAndheight a{color: #499EF3;border-bottom:1px solid blue;}
+	.ul_borderAndheight a:hover{color:#000;}
+	.col-sm-12{padding: 0;}
+	.floor .col-sm-12{padding: 10px 0;}
+	.form-controll{width: }
+	.row .nav-tabs{border: 0;;}
+	.pl10{padding-left: 10px;}
+	.body-title{border-bottom: 1px solid #ccc;line-height: 30px;height: 50px;}
+	.body-title .h2{line-height: 10px;}
+
+	.border_l{border:1px solid #ccc; border-bottom: 0;}
+	.border_r{border:1px solid #ccc; border-left:0; border-bottom:0;border-right: 0;}
+	.hot_borderAndheight{line-height:50px;height:50px; border-bottom:1px solid #ccc;}
+	.pt10{padding-top:10px;}
+	.ml10{margin-left: 10px;}
+	.h4_marginAndheight{margin:0; line-height:30px; font-size: 16px;}
+
+
+	.footer-wrapper{height: 50px;line-height: 50px;background: #F7F7F7;}
+
+	
+	</style>
+	<title>芦苇</title>
+</head>
+<body>
+	<div id="login" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="loginLabel" aria-hidden="false" >
+		<div class="modal-dialog" >
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" area-hidden="true">&times;
+					</button>
+					<h4 class="modal-title text-center" id="loginLabel">
+						<i class="icon">icon</i>登录/注册
+					</h4>
+				</div>
+				<div class="modal-body">
+					<div class="">
+						<label for="login-username">账号:</label>
+						<input type="text" id="login_username" name="uname" class="form-control" placeholder="请输入你的账号">
+
+						<label for="login-pwd">密码:</label>
+						<input type="text" id="login-pwd" name="upwd" class="form-control" placeholder="密码">
+					</div>
+
+					
+				</div>
+				
+				<div class="modal-footer">
+					<button  class="btn btn-primary form-control"> 
+						立刻登录
+					</button>
+				</div>
+				<div class="modal-footer" style="position:relative">
+					<div>
+						<button  class="btn btn-success">i找回密码</button>
+						<button  class="btn  btn-info">i注册账号</button>
+					</div>
+				</div>
+				
+				
+			</div>
+			
+		</div>	
+	</div>
+	<div class="header-wrapper">
+		<div class="navbar navbar-default navbar-fixed-top bgheader">
+			<div class="container">
+				<div class="nav">
+					<div class="row">
+						<!-- 栅格自适应 -->
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<!-- 图标 -->
+							<div class="col-md-1 pull-left hidden-xs">icon</div>
+							<!-- 当分辨绿为xs时 显示该按钮-->
+							<div class="col-md-5 hidden-lg hidden-sm hidden-md pull-left">
+									<div class="dropdown">
+										<a href="" class="dropdown-toggle" data-toggle="dropdown" style="color:#000;">
+											菜单
+										</a>
+										<ul class="dropdown-menu">
+											<li><a href="">动态</a></li>
+											<li><a href="">分类</a></li>
+											<li><a href="">关于</a></li>
+										</ul>
+									</div>
+							</div>
+							<!-- 列表 -->
+							<div class="col-md-6 pull-left hidden-xs">
+								<ul id="ul_nav" class="nav navbar-nav nav-head list-inline"> 
+									<li><a href=""><i class="glyphicon">1</i>详细<sup>hot!</sup></a></li>
+									<li><a href=""><i class="glyphicon">2</i>类别</a></li>
+									<li><a href=""><i class="glyphicon">3</i>关于</a></li>
+								</ul>
+							</div>
+							<!-- 登录按钮 -->
+							<div class="col-md-5 pull-right text-right">
+										<a class="btn btn-default" data-toggle="modal" data-target="#login">
+											登录
+										</a>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="body-wrapper">
+		<div class="container">
+			<div class="row bg-border">
+				<div class="row-wrapper">
+					<div class="col-md-9 col-sm-12 border_l">
+						<div class="body-title pl10">
+							<h2 class="h2 pull-left">最新动态</h2>
+
+							<ul class="nav nav-ul pull-right ul_borderAndheight">
+								<li class="active"><a href="">最新</a></li>
+							</ul>
+						</div>
+							<!-- 按钮菜单 -->
+
+						<!-- 最新动态 -->
+						<div class="body-list pl10">
+							<div class="floor">
+								<div class="col-sm-12 col-xs-12" >
+									<a class="hidden-xs pull-left photo" href="#">
+										<img src="img/defaultlogo.jpg" height="60" width="60" alt="visiter"><br>	
+									</a>
+
+									<div class="pull-left">
+										<h4 class="h4" >
+											<a href="" class="infotitle">web前端新手必看指南</a>
+										</h4>
+										<p>
+											<label for="">
+												<a href="" class="infoplace">web开发技术专区</a>
+											</label>
+											<span>
+												<a class="infoauthor">admin</a>
+												回复:<a href="" class="infocomment">100</a>
+											</span>
+											
+										</p>
+									</div> 
+
+								</div>
+							</div>
+							<div class="floor">
+								<div class="col-sm-12 col-xs-12" >
+									<a class="hidden-xs pull-left photo" href="#">
+										<img src="img/defaultlogo.jpg" height="60" width="60" alt="visiter"><br>	
+									</a>
+
+									<div class="pull-left">
+										<h4 class="h4" >
+											<a href="" class="infotitle">编辑神器sublime插件大全</a>
+										</h4>
+										<p>
+											<label for="">
+												<a href="" class="infoplace">web开发技术专区</a>
+											</label>
+											<span>
+												<a class="infoauthor">admin</a>
+												回复:<a href="" class="infocomment">100</a>
+											</span>
+											
+										</p>
+									</div> 
+
+								</div>
+							</div>
+							<div class="floor">
+								<div class="col-sm-12 col-xs-12" >
+									<a class="hidden-xs pull-left photo" href="#">
+										<img src="img/defaultlogo.jpg" height="60" width="60" alt="visiter"><br>	
+									</a>
+
+									<div class="pull-left">
+										<h4 class="h4" >
+											<a href="" class="infotitle">javascript知识篇：作用域和执行上下文环境</a>
+										</h4>
+										<p>
+											<label for="">
+												<a href="" class="infoplace">web开发技术专区</a>
+											</label>
+											<span>
+												<a class="infoauthor">admin</a>
+												回复:<a href="" class="infocomment">100</a>
+											</span>
+											
+										</p>
+									</div> 
+
+								</div>
+							</div>
+							<div class="floor">
+								<div class="col-sm-12 col-xs-12" >
+									<a class="hidden-xs pull-left photo" href="#">
+										<img src="img/defaultlogo.jpg" height="60" width="60" alt="visiter"><br>	
+									</a>
+
+									<div class="pull-left">
+										<h4 class="h4" >
+											<a href="" class="infotitle">javascript ajax请求和接收</a>
+										</h4>
+										<p>
+											<label for="">
+												<a href="" class="infoplace">web开发技术专区</a>
+											</label>
+											<span>
+												<a class="infoauthor">admin</a>
+												回复:<a href="" class="infocomment">100</a>
+											</span>
+											
+										</p>
+									</div> 
+
+								</div>
+							</div>
+							<div class="floor">
+								<div class="col-sm-12 col-xs-12" >
+									<a class="hidden-xs pull-left photo" href="#">
+										<img src="img/defaultlogo.jpg" height="60" width="60" alt="visiter"><br>	
+									</a>
+
+									<div class="pull-left">
+										<h4 class="h4" >
+											<a href="" class="infotitle">
+												javascript prototype和原型
+											</a>
+										</h4>
+										<p>
+											<label for="">
+												<a href="" class="infoplace">web开发技术专区</a>
+											</label>
+											<span>
+												<a class="infoauthor">admin</a>
+												回复:<a href="" class="infocomment">100</a>
+											</span>
+											
+										</p>
+									</div> 
+
+								</div>
+							</div>
+								
+						</div>
+					</div>
+
+					<div class="col-md-3 hidden-sm hidden-xs body-list border_r">
+						<div class="col-sm-12">
+							<div class="col-sm-12 hot_borderAndheight">
+								<h4 class="pull-left">热门话题</h4>
+								<a class="pull-right" href="" title="更多">更多</a>
+							</div>
+							<!-- 网站布告栏 -->
+							<div class="col-sm-12 pt10">
+								<a href="" class="pull-left">
+									<img src="img/group.jpg" height="50" width="50" alt="">
+								</a>
+								<div class="pull-left ml10">
+									<h4 class="h4 h4_marginAndheight">
+										<a href="" class="topic_title">网站布告栏</a>
+									</h4>
+									<p>
+										共计<a href="" class="acticle_number">3</a>篇
+									</p>
+								</div>
+							</div>	
+							<!--web技术专区  -->
+							<div class="col-sm-12 pt10">
+								<a href="" class="pull-left">
+									<img src="img/group.jpg" height="50" width="50" alt="">
+								</a>
+								<div class="pull-left ml10">
+									<h4 class="h4 h4_marginAndheight">
+										<a href="" class="topic_title">web技术专区</a>
+									</h4>
+									<p>
+										共计<a href="" class="acticle_number">3</a>篇
+									</p>
+								</div>
+							</div>
+							<!-- 闲聊吐槽专区 -->
+							<div class="col-sm-12 pt10">
+								<a href="" class="pull-left">
+									<img src="img/group.jpg" height="50" width="50" alt="">
+								</a>
+								<div class="pull-left ml10">
+									<h4 class="h4 h4_marginAndheight">
+										<a href="" class="topic_title">闲聊吐槽专区</a>
+									</h4>
+									<p>
+										共计<a href="" class="acticle_number">3</a>篇
+									</p>
+								</div>
+							</div>
+
+						</div>	
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="footer-wrapper">
+		<div class="container">
+			<div class="row text-center">
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					芦苇网欢迎你
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+</body>
+</html>
